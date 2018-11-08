@@ -11,7 +11,6 @@ def process_input():
 
     for line in fileinput.input():
         lines.append(line.rstrip())
-    #pprint(lines)
 
     d = int(lines[0])
     m = int(lines[1])
@@ -23,10 +22,8 @@ def process_input():
 
     training_data = [tuple(map(float, lines[i].split(","))) for i in range(3, 3 + m)]
 
-
     if n > 0:
         test_data = [tuple(map(float, lines[i].split(","))) for i in range(3 + m, len(lines))]
-
 
     return training_data, test_data
 
